@@ -16,26 +16,29 @@ namespace AvalaraCodeChallenge.Pages
         {
         //when the date form is submitted store the input data into a variable
         var date = Request.Form["date"];
-        //  string connectionString = "server=localhost;user=root;database=weather;port=3306;password=jg1996";
-        // MySqlConnection connection = new MySqlConnection(connectionString);
-        // try 
-        // {
-        //     System.Diagnostics.Debug.WriteLine("Connected");
-        //     connection.Open();
-        //     string query = "SELECT * FROM precipdata";
-        //     MySqlCommand command = new MySqlCommand(query, connection);
-        //     MySqlDataReader reader = command.ExecuteReader();
+        //create a connection to the mysql database on the local host
+         string connectionString = "server=localhost;user=root;database=weather;port=3306;password=jg1996";
+         MySqlConnection connection = new MySqlConnection(connectionString);
+        
+        try 
+        {
+            //if the connection succeds create a connection to the database
+            connection.Open();
+            //create a database query and retrieve the desired data from server
+            string query = "SELECT * FROM precipdata";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            //read the data sent back from query
+            while (reader.Read()) {
+                Console.WriteLine(reader[1]);
+            }
 
-        //     while (reader.Read()) {
-        //         Console.WriteLine(reader[1]);
-        //     }
 
-
-        // }
-        //  catch (Exception ex)
-        // {
-        //     Console.WriteLine(ex.ToString());
-        // }
+        }
+         catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+        }
 
         }
     }

@@ -9,9 +9,11 @@ namespace AvalaraCodeChallenge.Pages
 {
     public class IndexModel : PageModel
     {
-        public void OnGet()
+        public void OnPost()
         {
-
+        //when the date form is submitted store the input data into a variable
+        var date = Request.Form["date"];
+        
         }
     }
 }

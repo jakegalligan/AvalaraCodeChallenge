@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj": {}
+    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj": {
+    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj",
         "projectName": "AvalaraCodeChallenge",
-        "projectPath": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj",
+        "projectPath": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj",
         "packagesPath": "C:\\Users\\galli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\obj\\",
+        "outputPath": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -55,6 +55,14 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.6.1, )"
             }
           },
           "imports": [

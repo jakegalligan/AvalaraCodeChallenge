@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj",
+        "projectName": "AvalaraCodeChallenge",
+        "projectPath": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\AvalaraCodeChallenge.csproj",
+        "packagesPath": "C:\\Users\\galli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\galli\\onedrive\\documents\\code\\AvalaraCodeChallenge\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\galli\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

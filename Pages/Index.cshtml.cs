@@ -36,7 +36,7 @@ namespace AvalaraCodeChallenge.Pages
             //if the connection succeds create a connection to the database
             connection.Open();
             //create a database query and retrieve the desired data from server
-            string query = "SELECT * FROM precipdata";
+            string query = ($"SELECT precip FROM precipdata WHERE date={date}");
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             //initiliaze a list to store the data given back from the query
@@ -44,7 +44,7 @@ namespace AvalaraCodeChallenge.Pages
             //read the data sent back from query
             while (reader.Read()) {
             //for each data point returned from query add value to list
-            precipitationAmounts.Add(Convert.ToDouble(reader[6]));
+            precipitationAmounts.Add(Convert.ToDouble(reader[0]));
             }
             //get the average precipitation for the given date
             double predictedPrecip = this.getAverage(precipitationAmounts);

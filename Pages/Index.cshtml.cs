@@ -16,7 +16,17 @@ namespace AvalaraCodeChallenge.Pages
         public void OnPost()
         {
         //when the date form is submitted store the input data into a variable
-        var date = Request.Form["date"];
+        var date;
+
+        //if the user entered a date assign that value to the data variable
+        if ( Request.Form["date"] != null) {
+            date = Request.Form["date"];
+        } else {
+            //otherwise make the date the current day
+            DateTime thisDay = DateTime.Today;
+            date =thisDay.ToString("d");
+
+        }
         //create a connection to the mysql database on the local host
          string connectionString = "server=localhost;user=root;database=weather;port=3306;password=jg1996";
          MySqlConnection connection = new MySqlConnection(connectionString);

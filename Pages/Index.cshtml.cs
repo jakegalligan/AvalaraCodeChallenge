@@ -28,9 +28,12 @@ namespace AvalaraCodeChallenge.Pages
             string query = "SELECT * FROM precipdata";
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
+            //initiliaze a list to store the data given back from the query
+            List <double> percipitationAmounts = new List <double>();
             //read the data sent back from query
             while (reader.Read()) {
-                Console.WriteLine(reader[1]);
+            //for each data point returned from query add value to list
+            percipitationAmounts.Add(reader[6]);
             }
 
 

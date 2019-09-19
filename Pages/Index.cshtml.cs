@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Web.Script.Serialization;
 
 namespace AvalaraCodeChallenge.Pages
 {
@@ -35,10 +36,13 @@ namespace AvalaraCodeChallenge.Pages
             //for each data point returned from query add value to list
             precipitationAmounts.Add(Convert.ToDouble(reader[6]));
             }
+            //get the average precipitation for the given date
+            double predictedPrecip = this.getAverage(precipitationAmounts);
+            //create a new object with the predicted precipitation
+            var obj = ObjectToStoreData(predictedPrecip);
+            //convert the object into json
+            var jsonObject = new JavaScriptSerializer().Serialize(obj);
 
-
-            
-            Console.WriteLine("the average is", this.getAverage(precipitationAmounts));
 
 
         }
@@ -58,6 +62,12 @@ namespace AvalaraCodeChallenge.Pages
             double mean = sum/count;
             Console.WriteLine("the mean is", mean);
             return mean;
+        }
+        class ObjectToStoreData {
+            double Predictedprecipitation;
+            ObjectToStoreData(double predictedprecipitation) {
+                Predictedprecipitation = predictedprecipitation;
+            }
         }
         
     }

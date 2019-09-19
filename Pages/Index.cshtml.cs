@@ -29,12 +29,16 @@ namespace AvalaraCodeChallenge.Pages
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             //initiliaze a list to store the data given back from the query
-            List <double> percipitationAmounts = new List <double>();
+            List <double> precipitationAmounts = new List <double>();
             //read the data sent back from query
             while (reader.Read()) {
             //for each data point returned from query add value to list
-            percipitationAmounts.Add(reader[6]);
+            precipitationAmounts.Add(Convert.ToDouble(reader[6]));
             }
+
+
+            
+            Console.WriteLine("the average is", this.getAverage(precipitationAmounts));
 
 
         }
@@ -44,5 +48,17 @@ namespace AvalaraCodeChallenge.Pages
         }
 
         }
+        public double getAverage(List<double> list )
+        {
+            //get the sum of all the values in the list
+            double sum = list.Sum();
+            Console.WriteLine("sum", sum);
+            double count = list.Count;
+            Console.WriteLine("coutn", count);
+            double mean = sum/count;
+            Console.WriteLine("the mean is", mean);
+            return mean;
+        }
+        
     }
 }

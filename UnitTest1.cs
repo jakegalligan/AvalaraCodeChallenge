@@ -36,7 +36,18 @@ namespace avalaracodechallenge
             var acutalDateReturned = IndexModel.getDate(noDate);
 
             //Assert
-            AssemblyLoadEventArgs.AreEqual(expectedDateReturned,acutalDateReturned);
+            Assert.AreEqual(expectedDateReturned,acutalDateReturned);
         } 
+         public void EnteringDate_ReturnsSameDate () {
+             //Assert
+             var date = "3/20/2013";
+             var expectedDateReturned = date;
+
+             //Act
+             var acutalDateReturned = IndexModel.getDate(date);
+
+             //Assert
+             Assert.AreEqual(expectedDateReturned, acutalDateReturned);
+         }
     }
 }

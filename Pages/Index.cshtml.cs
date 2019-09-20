@@ -27,6 +27,7 @@ namespace AvalaraCodeChallenge.Pages
             date =thisDay.ToString("d");
 
         }
+        Console.WriteLine(date);
         //create a connection to the mysql database on the local host
          string connectionString = "server=localhost;user=root;database=weather;port=3306;password=jg1996";
          MySqlConnection connection = new MySqlConnection(connectionString);
@@ -36,7 +37,7 @@ namespace AvalaraCodeChallenge.Pages
             //if the connection succeds create a connection to the database
             connection.Open();
             //create a database query and retrieve the desired data from server
-            string query = ($"SELECT precip FROM precipdata WHERE date={date}");
+            string query = ($"SELECT precip FROM precipdata WHERE date='{date}'");
             MySqlCommand command = new MySqlCommand(query, connection);
             MySqlDataReader reader = command.ExecuteReader();
             //initiliaze a list to store the data given back from the query
@@ -64,7 +65,7 @@ namespace AvalaraCodeChallenge.Pages
         }
         public double getAverage(List<double> list )
         {
-            //get the sum of all the values in the list
+            //get the sum and count of all values in the list and calculate the mean
             double sum = list.Sum();
             Console.WriteLine("sum", sum);
             double count = list.Count;

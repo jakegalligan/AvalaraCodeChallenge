@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj": {}
+    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\avalaracodechallenge.csproj": {}
   },
   "projects": {
-    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj": {
+    "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\avalaracodechallenge.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj",
-        "projectName": "AvalaraCodeChallenge",
-        "projectPath": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\AvalaraCodeChallenge.csproj",
+        "projectUniqueName": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\avalaracodechallenge.csproj",
+        "projectName": "avalaracodechallenge",
+        "projectPath": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\avalaracodechallenge.csproj",
         "packagesPath": "C:\\Users\\galli\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\galli\\onedrive\\documents\\code\\avalaracodechallenge\\obj\\",
         "projectStyle": "PackageReference",
@@ -39,30 +39,23 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
-            "Microsoft.AspNetCore.App": {
-              "suppressParent": "All",
+            "MSTest.TestAdapter": {
               "target": "Package",
-              "version": "[2.2.0, )",
-              "autoReferenced": true
+              "version": "[1.4.0, )"
             },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "suppressParent": "All",
+            "MSTest.TestFramework": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[1.4.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
-            },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.17, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.6.1, )"
             }
           },
           "imports": [

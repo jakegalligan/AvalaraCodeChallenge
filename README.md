@@ -23,8 +23,8 @@ dotnet restore
 dotnet run
 ```
 
-##Final Thoughts
-## Process
+## Final Thoughts
+### Process
 My approach to the challenge revolved around me creating a list of specific tasks that need to be completed. The list was as follows:
 1. Import the provided data into SQL database
 2. Figure out how to connect database with code
@@ -32,5 +32,5 @@ My approach to the challenge revolved around me creating a list of specific task
 4. Create logic for application
 5. Learn C# unit testing and implement tests
 
-## Reflection
+### Reflection
 This was my first introduction into C# and the .NET framework, as such, I was able to learn various aspects to the language/framework! While, I understand that some techniques I may have used may not be best practice for C#, however I feel just over this short project I increased my understanding of C# immensely!

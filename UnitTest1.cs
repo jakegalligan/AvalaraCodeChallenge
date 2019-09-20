@@ -26,8 +26,17 @@ namespace avalaracodechallenge
             //Assert
             Assert.AreEqual(expectedMean, actualMean, .001);
 
-            
-
         }
+        public void EnteringNoDate_ReturnsCurrentDate () {
+            //Arrange
+            var noDate = null;
+            var expectedDateReturned = DateTime.Today.ToString('d');
+
+            //Act
+            var acutalDateReturned = IndexModel.getDate(noDate);
+
+            //Assert
+            AssemblyLoadEventArgs.AreEqual(expectedDateReturned,acutalDateReturned);
+        } 
     }
 }

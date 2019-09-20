@@ -16,18 +16,8 @@ namespace AvalaraCodeChallenge.Pages
         public void OnPost()
         {
         //when the date form is submitted store the input data into a variable
-        var date;
+         var date = getDate(Request.Form["date"]);
 
-        //if the user entered a date assign that value to the data variable
-        if ( Request.Form["date"] != null) {
-            date = Request.Form["date"];
-        } else {
-            //otherwise make the date the current day
-            DateTime thisDay = DateTime.Today;
-            date =thisDay.ToString("d");
-
-        }
-        Console.WriteLine(date);
         //create a connection to the mysql database on the local host
          string connectionString = "server=localhost;user=root;database=weather;port=3306;password=jg1996";
          MySqlConnection connection = new MySqlConnection(connectionString);
@@ -52,7 +42,7 @@ namespace AvalaraCodeChallenge.Pages
             //create a new object with the predicted precipitation
             var obj = ObjectToStoreData(predictedPrecip);
             //convert the object into json
-            var jsonObject = new JavaScriptSerializer().Serialize(obj);
+            return jsonObject = new JavaScriptSerializer().Serialize(obj);
 
 
 
@@ -74,6 +64,17 @@ namespace AvalaraCodeChallenge.Pages
             Console.WriteLine("the mean is", mean);
             return mean;
         }
+        public DateTime getDate (DateTime date) {
+         //if the user entered a date assign that value to the data variable
+        if ( date != null) {
+            date = Request.Form["date"];
+        } else {
+            //otherwise make the date the current day
+            DateTime thisDay = DateTime.Today;
+            date =thisDay.ToString("d");
+        }
+        return date;
+    }
         class ObjectToStoreData {
             double Predictedprecipitation;
             ObjectToStoreData(double predictedprecipitation) {
